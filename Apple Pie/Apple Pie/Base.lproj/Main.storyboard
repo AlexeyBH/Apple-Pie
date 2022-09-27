@@ -29,10 +29,6 @@
                                                 <rect key="frame" x="354" y="341" width="75" height="71"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Apple" translatesAutoresizingMaskIntoConstraints="NO" id="AGt-ab-R12">
-                                                <rect key="frame" x="425" y="237" width="75" height="71"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Apple" translatesAutoresizingMaskIntoConstraints="NO" id="e73-0m-80u">
                                                 <rect key="frame" x="827" y="212" width="75" height="71"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -69,6 +65,10 @@
                                                 <rect key="frame" x="502" y="99" width="75" height="71"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Apple" translatesAutoresizingMaskIntoConstraints="NO" id="AGt-ab-R12">
+                                                <rect key="frame" x="430" y="234" width="75" height="71"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -80,8 +80,34 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1W5-WB-Osk">
                                         <rect key="frame" x="0.0" y="686" width="1366" height="294"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-Uq-6CS">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-Uq-6CS">
                                                 <rect key="frame" x="0.0" y="0.0" width="1366" height="73.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dN3-Z2-NPM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="1366" height="73.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXXXXXXXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTy-Kw-Eue">
+                                                                <rect key="frame" x="583" y="19" width="200" height="36"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0k-Db-5IO">
+                                                                <rect key="frame" x="1206" y="22" width="140" height="30"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="n0k-Db-5IO" firstAttribute="centerY" secondItem="dN3-Z2-NPM" secondAttribute="centerY" id="6aG-Pn-6VR"/>
+                                                            <constraint firstAttribute="trailing" secondItem="n0k-Db-5IO" secondAttribute="trailing" constant="20" id="CS5-X3-plJ"/>
+                                                            <constraint firstItem="tTy-Kw-Eue" firstAttribute="centerX" secondItem="dN3-Z2-NPM" secondAttribute="centerX" id="OWb-u6-GSZ"/>
+                                                            <constraint firstItem="tTy-Kw-Eue" firstAttribute="centerY" secondItem="dN3-Z2-NPM" secondAttribute="centerY" id="aEA-hK-EDq"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Zbd-Zj-N3O">
                                                 <rect key="frame" x="0.0" y="73.5" width="1366" height="73.5"/>
@@ -331,6 +357,47 @@
                             <constraint firstItem="YzJ-0i-whz" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.7" id="vTl-ZV-L1M"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="correctWord" destination="aEA-hK-EDq" id="Wrn-kc-h2s"/>
+                        <outlet property="scoreLabel" destination="KSK-kc-sei" id="KGW-QO-JuT"/>
+                        <outletCollection property="apples" destination="Z84-1n-jfH" collectionClass="NSMutableArray" id="6dn-DL-O1W"/>
+                        <outletCollection property="buttons" destination="EA9-5u-m8J" collectionClass="NSMutableArray" id="uOr-Ru-8vQ"/>
+                        <outletCollection property="apples" destination="AGt-ab-R12" collectionClass="NSMutableArray" id="c6z-nr-V13"/>
+                        <outletCollection property="apples" destination="OGu-cW-29a" collectionClass="NSMutableArray" id="r5D-50-M1Z"/>
+                        <outletCollection property="apples" destination="wTC-Qz-RPb" collectionClass="NSMutableArray" id="PMN-E1-7G6"/>
+                        <outletCollection property="apples" destination="OaO-Q9-TA8" collectionClass="NSMutableArray" id="Y79-x9-JxS"/>
+                        <outletCollection property="apples" destination="xMa-57-wKc" collectionClass="NSMutableArray" id="moi-IA-ice"/>
+                        <outletCollection property="apples" destination="BLh-mj-uUa" collectionClass="NSMutableArray" id="V0A-Wr-LzZ"/>
+                        <outletCollection property="apples" destination="7P7-ID-e42" collectionClass="NSMutableArray" id="ap6-xM-KjD"/>
+                        <outletCollection property="apples" destination="bYP-zC-iGA" collectionClass="NSMutableArray" id="Sm8-9B-JN6"/>
+                        <outletCollection property="apples" destination="e73-0m-80u" collectionClass="NSMutableArray" id="Kc2-zU-Pkr"/>
+                        <outletCollection property="apples" destination="Z6z-xQ-2gm" collectionClass="NSMutableArray" id="dv5-nd-d00"/>
+                        <outletCollection property="buttons" destination="ygt-ve-wKz" collectionClass="NSMutableArray" id="kqu-cH-TJJ"/>
+                        <outletCollection property="buttons" destination="7EO-q7-Ge4" collectionClass="NSMutableArray" id="uhJ-7x-OUO"/>
+                        <outletCollection property="buttons" destination="DMK-1L-feK" collectionClass="NSMutableArray" id="HtJ-eG-BsT"/>
+                        <outletCollection property="buttons" destination="0UI-dN-xKZ" collectionClass="NSMutableArray" id="Fw3-z2-0gc"/>
+                        <outletCollection property="buttons" destination="zZQ-tR-xOn" collectionClass="NSMutableArray" id="N0X-6g-3hr"/>
+                        <outletCollection property="buttons" destination="Dgg-iM-zXu" collectionClass="NSMutableArray" id="uf8-Ch-xR5"/>
+                        <outletCollection property="buttons" destination="gfr-X4-6pK" collectionClass="NSMutableArray" id="VAV-Fw-c3u"/>
+                        <outletCollection property="buttons" destination="viu-Qz-1Ms" collectionClass="NSMutableArray" id="N5P-T4-d2G"/>
+                        <outletCollection property="buttons" destination="g6G-C0-3GY" collectionClass="NSMutableArray" id="MmL-6m-Bpx"/>
+                        <outletCollection property="buttons" destination="Lf1-jB-rMO" collectionClass="NSMutableArray" id="NOb-Gk-1ax"/>
+                        <outletCollection property="buttons" destination="QdP-oQ-FKo" collectionClass="NSMutableArray" id="Nfj-SF-7Re"/>
+                        <outletCollection property="buttons" destination="aeI-Ks-5ap" collectionClass="NSMutableArray" id="6yO-Ok-jRX"/>
+                        <outletCollection property="buttons" destination="JtK-f8-Pn6" collectionClass="NSMutableArray" id="Ixk-cS-B5U"/>
+                        <outletCollection property="buttons" destination="XM5-fc-sJS" collectionClass="NSMutableArray" id="yEP-22-D3I"/>
+                        <outletCollection property="buttons" destination="bIb-YA-IKW" collectionClass="NSMutableArray" id="l91-fU-5qK"/>
+                        <outletCollection property="buttons" destination="hPQ-8v-Kqh" collectionClass="NSMutableArray" id="kRq-FQ-m39"/>
+                        <outletCollection property="buttons" destination="vua-hY-WMi" collectionClass="NSMutableArray" id="OUq-tt-tLQ"/>
+                        <outletCollection property="buttons" destination="YQ8-Gf-p4P" collectionClass="NSMutableArray" id="e67-UI-v9c"/>
+                        <outletCollection property="buttons" destination="fm8-l8-MpF" collectionClass="NSMutableArray" id="JIh-Bp-Ka8"/>
+                        <outletCollection property="buttons" destination="0b0-kt-N4a" collectionClass="NSMutableArray" id="8hX-YA-PTM"/>
+                        <outletCollection property="buttons" destination="r3H-lu-wJM" collectionClass="NSMutableArray" id="0U6-hz-1NG"/>
+                        <outletCollection property="buttons" destination="beR-tC-iWy" collectionClass="NSMutableArray" id="CS2-Qq-lH2"/>
+                        <outletCollection property="buttons" destination="cjk-hE-k21" collectionClass="NSMutableArray" id="LOk-g8-q0s"/>
+                        <outletCollection property="buttons" destination="KSK-kc-sei" collectionClass="NSMutableArray" id="QPo-Qm-A8L"/>
+                        <outletCollection property="buttons" destination="Mwm-KS-YcH" collectionClass="NSMutableArray" id="SJg-Sh-5K6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
