@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4293F6FA28E352300047B8E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4293F6F928E352300047B8E1 /* Model.swift */; };
 		42B8D8CD28DE013900335C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B8D8CC28DE013900335C39 /* AppDelegate.swift */; };
 		42B8D8CF28DE013900335C39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B8D8CE28DE013900335C39 /* SceneDelegate.swift */; };
 		42B8D8D128DE013900335C39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B8D8D028DE013900335C39 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4293F6F928E352300047B8E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		42B8D8C928DE013900335C39 /* Apple Pie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Pie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B8D8CC28DE013900335C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42B8D8CE28DE013900335C39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				42B8D8CC28DE013900335C39 /* AppDelegate.swift */,
 				42B8D8CE28DE013900335C39 /* SceneDelegate.swift */,
 				42DABD9C28E2C6980031F99A /* Main.storyboard */,
+				4293F6F928E352300047B8E1 /* Model.swift */,
 				42B8D8D028DE013900335C39 /* ViewController.swift */,
 				42B8D8D528DE013A00335C39 /* Assets.xcassets */,
 				42B8D8D728DE013A00335C39 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				42B8D8D128DE013900335C39 /* ViewController.swift in Sources */,
 				42B8D8CD28DE013900335C39 /* AppDelegate.swift in Sources */,
 				42B8D8CF28DE013900335C39 /* SceneDelegate.swift in Sources */,
+				4293F6FA28E352300047B8E1 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
