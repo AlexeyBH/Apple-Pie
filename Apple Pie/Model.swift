@@ -74,14 +74,15 @@ struct Game {
         // Make all symbols hidden by default, then showing some of them
         data = newWord.map {(symbol: $0, state: .hidden)}
         
-        charactersLeft = newWord.count
-
         for _ in 0..<symbolsShown {
             if let element = data.randomElement()?.symbol {
                 _ = guessCharacter(element)
-                charactersLeft -= 1
             }
         }
+        
+        // Counting distinct .hidden letters by using a Set.
+        let arr = data.filter { $0.state == .hidden }.map{ $0.symbol }
+        charactersLeft = Set<Character>(arr).count
         
         return .roundStarted(charactersLeft: newWord.count)
     }

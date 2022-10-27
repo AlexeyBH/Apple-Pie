@@ -26,10 +26,10 @@ class ViewController: UIViewController {
     
     @IBAction func nextRoundPressed(_ sender: UIButton) {
         sender.isHidden = true
-        makeButtons(true)
+        enableDisableAllButtons(true)
         gameState = Game.shared.startNewRound()
         characterGuessState = .right
-        updateDisabledButtons()
+        setDisabledButtons()
         UpdateUI()
     }
     
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         guard let character = sender.configuration?.title?.first else { return }
             let state = Game.shared.guessCharacter(character)
             if state == .roundFailed || state == .roundFinished{
-                makeButtons(false)
+                enableDisableAllButtons(false)
                 nextRoundBtn.isHidden = false
             } else {
                 characterGuessState = state
@@ -56,9 +56,9 @@ class ViewController: UIViewController {
     var characterGuessState: CharacterGuessState!
     
     // Enables oe disables screen keyboard
-    func makeButtons(_ state: Bool) {
-        for button in buttons {
-            button.isEnabled = state
+    func enableDisableAllButtons(_ state: Bool) {
+        buttons.forEach {
+            $0.isEnabled = state
         }
     }
     
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         switch gameState {
         case .gameOver:
             currentWord.text = "Game is over."
-            makeButtons(false)
+            enableDisableAllButtons(false)
         case .roundStarted(_):
             currentWord.attributedText = makeFormattedText()
         default:
@@ -88,10 +88,23 @@ class ViewController: UIViewController {
         scoreText.text = "Score: \(Game.shared.currentScore)"
         winsText.text = "Wins: \(Game.shared.totalWins)"
         losesText.text = "Loses: \(Game.shared.totalLoses)"
+        
+        dropApplesFromTree()
+    }
+    
+    // Hiding all apples that are outside 0..characterLeft range
+    // Should be replaced with something more interesting
+    private func dropApplesFromTree() {
+        apples.enumerated().forEach {
+            $0.element.isHidden = $0.offset + 1 > Game.shared.charactersLeft
+        }
     }
         
-    func updateDisabledButtons() {
+    // Disables buttons on keyboard that were already shown
+    private func setDisabledButtons() {
+        // Array of shown characters
         let alreadyShown = Game.shared.data.filter{$0.state == .shown}.map{$0.symbol}
+        // Disabling all buttons that title contain any of shown characters
         buttons.filter {
             guard let title = $0.configuration?.title else { return false }
             return alreadyShown.contains(Character(title))
@@ -103,7 +116,7 @@ class ViewController: UIViewController {
 
         gameState = Game.shared.startNewRound()
         
-        updateDisabledButtons()
+        setDisabledButtons()
 
         
         UpdateUI()
