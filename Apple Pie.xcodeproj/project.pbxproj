@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		428A1E302910E770006DCD37 /* AppleTree.xib in Resources */ = {isa = PBXBuildFile; fileRef = 428A1E2F2910E770006DCD37 /* AppleTree.xib */; };
 		4293F6FA28E352300047B8E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4293F6F928E352300047B8E1 /* Model.swift */; };
 		42B8D8CD28DE013900335C39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B8D8CC28DE013900335C39 /* AppDelegate.swift */; };
 		42B8D8CF28DE013900335C39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B8D8CE28DE013900335C39 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		428A1E2F2910E770006DCD37 /* AppleTree.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppleTree.xib; sourceTree = "<group>"; };
 		4293F6F928E352300047B8E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		42B8D8C928DE013900335C39 /* Apple Pie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Pie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B8D8CC28DE013900335C39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				42B8D8CC28DE013900335C39 /* AppDelegate.swift */,
 				42B8D8CE28DE013900335C39 /* SceneDelegate.swift */,
+				428A1E2F2910E770006DCD37 /* AppleTree.xib */,
 				42DABD9C28E2C6980031F99A /* Main.storyboard */,
 				4293F6F928E352300047B8E1 /* Model.swift */,
 				42B8D8D028DE013900335C39 /* ViewController.swift */,
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428A1E302910E770006DCD37 /* AppleTree.xib in Resources */,
 				42B8D8D928DE013A00335C39 /* LaunchScreen.storyboard in Resources */,
 				42B8D8D628DE013A00335C39 /* Assets.xcassets in Resources */,
 				42DABD9E28E2C6990031F99A /* Main.storyboard in Resources */,
