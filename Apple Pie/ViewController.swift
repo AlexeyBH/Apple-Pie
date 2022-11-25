@@ -9,8 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
  
+    
+
+    
+    @IBOutlet var treeView: AppleTree!
     // Apples on the tree
-    @IBOutlet var apples: [UIImageView]!
+
     
     // Screen keyboard
     @IBOutlet var buttons: [UIButton]!
@@ -36,6 +40,9 @@ class ViewController: UIViewController {
     // Screen keyboard pressed
     @IBAction func characterPressed(_ sender: UIButton) {
         guard let character = sender.configuration?.title?.first else { return }
+        
+        NetworkManager.shared.fetchData()
+        
             let state = Game.shared.guessCharacter(character)
             if state == .roundFailed || state == .roundFinished{
                 enableDisableAllButtons(false)
@@ -95,7 +102,7 @@ class ViewController: UIViewController {
     // Hiding all apples that are outside 0..characterLeft range
     // Should be replaced with something more interesting
     private func dropApplesFromTree() {
-        apples.enumerated().forEach {
+        treeView.apples.enumerated().forEach {
             $0.element.isHidden = $0.offset + 1 > Game.shared.charactersLeft
         }
     }
