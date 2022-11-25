@@ -16,7 +16,7 @@
 		42B8D8D128DE013900335C39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B8D8D028DE013900335C39 /* ViewController.swift */; };
 		42B8D8D628DE013A00335C39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42B8D8D528DE013A00335C39 /* Assets.xcassets */; };
 		42B8D8D928DE013A00335C39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42B8D8D728DE013A00335C39 /* LaunchScreen.storyboard */; };
-		42BA0223292209ED005FFDEA /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA0222292209ED005FFDEA /* Network.swift */; };
+		42BA0223292209ED005FFDEA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BA0222292209ED005FFDEA /* NetworkManager.swift */; };
 		42DABD9E28E2C6990031F99A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42DABD9C28E2C6980031F99A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,7 @@
 		42B8D8D528DE013A00335C39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42B8D8D828DE013A00335C39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42B8D8DA28DE013A00335C39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		42BA0222292209ED005FFDEA /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		42BA0222292209ED005FFDEA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		42DABD9D28E2C6980031F99A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Apple Pie/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		8BEC5394336AD6D68C29BD6C /* Pods_Apple_Pie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Apple_Pie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C198A896356037CD42CD6D /* Pods-Apple Pie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Apple Pie.release.xcconfig"; path = "Target Support Files/Pods-Apple Pie/Pods-Apple Pie.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				42AD221D291A1D3200CCA0F8 /* AppleTree.swift */,
 				42DABD9C28E2C6980031F99A /* Main.storyboard */,
 				4293F6F928E352300047B8E1 /* Model.swift */,
-				42BA0222292209ED005FFDEA /* Network.swift */,
+				42BA0222292209ED005FFDEA /* NetworkManager.swift */,
 				42B8D8D028DE013900335C39 /* ViewController.swift */,
 				42B8D8D528DE013A00335C39 /* Assets.xcassets */,
 				42B8D8D728DE013A00335C39 /* LaunchScreen.storyboard */,
@@ -221,7 +221,7 @@
 			files = (
 				42B8D8D128DE013900335C39 /* ViewController.swift in Sources */,
 				42B8D8CD28DE013900335C39 /* AppDelegate.swift in Sources */,
-				42BA0223292209ED005FFDEA /* Network.swift in Sources */,
+				42BA0223292209ED005FFDEA /* NetworkManager.swift in Sources */,
 				42B8D8CF28DE013900335C39 /* SceneDelegate.swift in Sources */,
 				42AD221E291A1D3200CCA0F8 /* AppleTree.swift in Sources */,
 				4293F6FA28E352300047B8E1 /* Model.swift in Sources */,
