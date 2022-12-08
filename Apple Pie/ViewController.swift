@@ -42,6 +42,9 @@ class ViewController: UIViewController {
     @IBAction func characterPressed(_ sender: UIButton) {
         guard let character = sender.configuration?.title?.first else { return }
         
+        
+        NetworkManager.shared.fetchData()
+        
             let state = Game.shared.guessCharacter(character)
             if state == .roundFailed || state == .roundFinished{
                 enableDisableAllButtons(false)
