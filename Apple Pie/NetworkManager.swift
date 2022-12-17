@@ -33,7 +33,8 @@ class NetworkManager {
 //        }
         
 //        let retn = TestReturn()
-         
+        
+        let closure = () ->
         
         let result = AF.request(sourceSite).responseDecodable(of: Words.self)
         { response in
