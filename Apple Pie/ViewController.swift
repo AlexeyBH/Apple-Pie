@@ -40,11 +40,19 @@ class ViewController: UIViewController {
     
     // Screen keyboard pressed
     @IBAction func characterPressed(_ sender: UIButton) {
-        guard let character = sender.configuration?.title?.first else { return }
-        
-        
-        NetworkManager.shared.fetchData()
-        
+        Task { @MainActor in
+            guard let character = sender.configuration?.title?.first else { return }
+            
+            //        NetworkManager.shared.closure = { words in
+            //            self.Words = word
+            //        }
+            print("debug: downloading will start")
+            let words = await NetworkManager.shared.fetchWords()
+            
+            
+            print("debug: downloading did start")
+            print("debug: \(words) ?? got nothing")
+            
             let state = Game.shared.guessCharacter(character)
             if state == .roundFailed || state == .roundFinished{
                 enableDisableAllButtons(false)
@@ -54,6 +62,7 @@ class ViewController: UIViewController {
                 sender.isEnabled = false
             }
             UpdateUI()
+        }
     }
     
     typealias Attributes = [NSAttributedString.Key: Any]?
